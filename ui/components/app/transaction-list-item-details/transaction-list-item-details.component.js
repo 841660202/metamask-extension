@@ -218,6 +218,7 @@ export default class TransactionListItemDetails extends PureComponent {
     return (
       <Popover title={title} onClose={onClose}>
         <div className="transaction-list-item-details">
+          {/* 加速，取消，重试 */}
           <div className="transaction-list-item-details__operations">
             <div className="transaction-list-item-details__header-buttons">
               {showSpeedUp && (
@@ -353,6 +354,7 @@ export default class TransactionListItemDetails extends PureComponent {
                 }}
               />
             </div>
+            {/* 交易 */}
             <div className="transaction-list-item-details__cards-container">
               <TransactionBreakdown
                 nonce={transactionGroup.initialTransaction.txParams.nonce}
@@ -381,6 +383,7 @@ export default class TransactionListItemDetails extends PureComponent {
               {transactionGroup.initialTransaction.type !==
                 TransactionType.incoming && (
                 <Disclosure title={t('activityLog')} size="small">
+                  {/* 活动日志 */}
                   <TransactionActivityLog
                     transactionGroup={transactionGroup}
                     className="transaction-list-item-details__transaction-activity-log"

@@ -99,6 +99,7 @@ const GasDetailsItem = ({
     <TransactionDetailItem
       key="gas-details-item"
       data-testid={dataTestId}
+      // gas费用预估
       detailTitle={<Text>{t('estimatedFee')}</Text>}
       detailTitleColor={TextColor.textDefault}
       detailText={
@@ -162,6 +163,7 @@ const GasDetailsItem = ({
           </Box>
         </>
       }
+      // gas 时间
       subTitle={
         <GasTiming
           maxPriorityFeePerGas={maxPriorityFeePerGasToRender}

@@ -181,7 +181,7 @@ env:
   - TOKEN_ALLOWANCE_IMPROVEMENTS: false
   - TRANSACTION_SECURITY_PROVIDER: false
   # The unlock password
-  - PASSWORD: null
+  - PASSWORD: Qsc@#666qwe
   # Also see METAMASK_DEBUG and NODE_DEBUG
   - DEBUG: null
   - SUPPORT_LINK: https://support.metamask.io
@@ -225,7 +225,7 @@ env:
   # Modified in <root>/development/build/scripts.js:@getPhishingWarningPageUrl
   - PHISHING_WARNING_PAGE_URL: null
   # Modified in <root>/development/build/scripts.js:@getInfuraProjectId
-  - INFURA_PROJECT_ID
+  - INFURA_PROJECT_ID: 8e701c09723c40c089b692c438bc22a9
   # Modified in <root>/development/build/scripts.js:@getSegmentWriteKey
   - SEGMENT_WRITE_KEY: ''
   # Modified in <root>/development/build/scripts.js:@setEnvironmentVariables

@@ -11,6 +11,8 @@ import {
  * available. It is essentially a wrapper of wallet_requestPermissions that
  * only errors if the user rejects the request. We maintain the method for
  * backwards compatibility reasons.
+ * 这个方法尝试检索请求者可用的以太坊账户，或者如果当前没有可用的账户，则发起一个账户访问请求。
+ * 它本质上是 wallet_requestPermissions 的一个包装器，只有在用户拒绝请求时才会报错。出于向后兼容性的原因，我们保留了这个方法。
  */
 
 const requestEthereumAccounts = {

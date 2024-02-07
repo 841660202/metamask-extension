@@ -64,6 +64,7 @@ const CAVEATS = {
 /**
  * Each function here corresponds to what would be a type or interface consumed
  * by permissions controller functions if we used TypeScript.
+ * 每个函数都对应于如果我们使用TypeScript，则权限控制器函数将消耗的类型或接口。
  */
 const PERMS = {
   /**

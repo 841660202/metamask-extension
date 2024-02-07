@@ -70,6 +70,7 @@ export const AccountDetailsAuthenticate = ({
         labelProps={{ fontWeight: FontWeight.Medium }}
         autoFocus
       />
+      {/* 切勿泄露此私钥。任何拥有您私钥的人都可以窃取您账户中持有的任何资产 */}
       <BannerAlert
         marginTop={6}
         severity={Severity.Danger}

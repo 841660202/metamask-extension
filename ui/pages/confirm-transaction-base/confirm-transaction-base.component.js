@@ -481,9 +481,11 @@ export default class ConfirmTransactionBase extends Component {
             renderSimulationFailureWarning && simulationFailureWarning(),
             !renderSimulationFailureWarning && (
               <div key="confirm-transaction-base_confirm-gas-display">
+                {/* http://t-blog-images.aijs.top/img/202402061620609.webp */}
                 <ConfirmGasDisplay
                   userAcknowledgedGasMissing={userAcknowledgedGasMissing}
                 />
+                {/* fee 详情 */}
                 <FeeDetailsComponent
                   useCurrencyRateCheck={useCurrencyRateCheck}
                   txData={txData}

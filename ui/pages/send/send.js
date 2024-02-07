@@ -134,6 +134,7 @@ export default function SendTransactionScreen() {
           );
         }}
         onReset={() => dispatch(resetRecipientInput())}
+        // 扫码发送
         scanQrCode={() => {
           trackEvent({
             event: 'Used QR scanner',

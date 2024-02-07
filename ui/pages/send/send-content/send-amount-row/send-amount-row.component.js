@@ -85,7 +85,9 @@ export default class SendAmountRow extends Component {
         showError={inError}
         errorType="amount"
       >
+        {/* 最大 */}
         <AmountMaxButton inError={inError} />
+        {/* 输入发送的数额 */}
         {this.renderInput()}
       </SendRowWrapper>
     );

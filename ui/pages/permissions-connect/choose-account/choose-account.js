@@ -69,6 +69,7 @@ const ChooseAccount = ({
         <PermissionsConnectHeader
           iconUrl={targetSubjectMetadata?.iconUrl}
           iconName={targetSubjectMetadata?.name}
+          // 与 MetaMask 连接
           headerTitle={t('connectWithMetaMask')}
           headerText={headerText}
           siteOrigin={targetSubjectMetadata?.origin}

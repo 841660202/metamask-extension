@@ -242,6 +242,7 @@ export default function GasDisplay({ gasError }) {
                         }}
                         key={`${nativeCurrency}-buy-button`}
                       >
+                        {/* 购买 */}
                         {t('buyAsset', [nativeCurrency])}
                       </Button>,
                       <Button
@@ -252,6 +253,7 @@ export default function GasDisplay({ gasError }) {
                         }
                         key="receive-button"
                       >
+                        {/* 保证金 */}
                         {t('deposit')}
                       </Button>,
                     ])}

@@ -2673,6 +2673,7 @@ export function exportAccount(
 
     log.debug(`background.verifyPassword`);
     return new Promise<string>((resolve, reject) => {
+      // 校验密码
       callBackgroundMethod('verifyPassword', [password], function (err) {
         if (err) {
           log.error('Error in verifying password.');
@@ -2682,6 +2683,7 @@ export function exportAccount(
           return;
         }
         log.debug(`background.exportAccount`);
+        // exportAccount 为什么可以拿到数据
         callBackgroundMethod<string>(
           'exportAccount',
           [address, password],

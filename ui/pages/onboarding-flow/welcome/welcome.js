@@ -252,6 +252,7 @@ export default function OnboardingWelcome() {
             onClick={onCreateClick}
             disabled={!termsChecked}
           >
+            {/* 创建钱包 */}
             {
               ///: BEGIN:ONLY_INCLUDE_IF(build-main,build-beta,build-flask)
               t('onboardingCreateWallet')
@@ -271,6 +272,7 @@ export default function OnboardingWelcome() {
             onClick={onImportClick}
             disabled={!termsChecked}
           >
+            {/* 导入钱包 */}
             {t('onboardingImportWallet')}
           </Button>
         </li>

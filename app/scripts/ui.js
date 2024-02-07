@@ -180,6 +180,7 @@ async function start() {
 
     // resetExtensionStreamAndListeners takes care to remove listeners from closed streams
     // it also creates new streams and attaches event listeners to them
+    // 重置扩展流和监听器
     const resetExtensionStreamAndListeners = () => {
       extensionPort.onMessage.removeListener(messageListener);
       extensionPort.onDisconnect.removeListener(
@@ -201,6 +202,7 @@ async function start() {
         extensionPort.onMessage.removeListener(messageListener);
       }
     };
+    // 扩展端口消息监听
     extensionPort.onMessage.addListener(messageListener);
   }
 

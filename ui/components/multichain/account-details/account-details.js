@@ -139,6 +139,7 @@ export const AccountDetails = ({ address }) => {
       </Modal>
 
       {/* This is the Modal that says "Hold to reveal private key" */}
+      {/* 这是一个模式，上面写着“按住以显示私钥” */}
       <HoldToRevealModal
         isOpen={showHoldToReveal}
         onClose={() => {

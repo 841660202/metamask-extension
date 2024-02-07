@@ -388,6 +388,7 @@ function TransactionListItemInner({
           ///: END:ONLY_INCLUDE_IF
         }
       </ActivityListItem>
+      {/* 点击后展示发送详情 */}
       {showDetails && (
         <TransactionListItemDetails
           title={title}

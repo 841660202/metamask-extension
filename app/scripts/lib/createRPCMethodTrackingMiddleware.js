@@ -33,6 +33,7 @@ const RATE_LIMIT_TYPES = {
 /**
  * This object maps a method name to a RATE_LIMIT_TYPE. If not in this map the
  * default is 'RATE_LIMITED'
+ * 这个对象将方法名称映射到 RATE_LIMIT_TYPE。如果不在这个映射中，默认值是'RATE_LIMITED'
  */
 const RATE_LIMIT_MAP = {
   [MESSAGE_TYPE.ETH_SIGN]: RATE_LIMIT_TYPES.NON_RATE_LIMITED,
@@ -44,6 +45,7 @@ const RATE_LIMIT_MAP = {
   [MESSAGE_TYPE.ETH_GET_ENCRYPTION_PUBLIC_KEY]:
     RATE_LIMIT_TYPES.NON_RATE_LIMITED,
   [MESSAGE_TYPE.ETH_REQUEST_ACCOUNTS]: RATE_LIMIT_TYPES.RATE_LIMITED,
+  // 钱包请求权限
   [MESSAGE_TYPE.WALLET_REQUEST_PERMISSIONS]: RATE_LIMIT_TYPES.RATE_LIMITED,
   [MESSAGE_TYPE.SEND_METADATA]: RATE_LIMIT_TYPES.BLOCKED,
   [MESSAGE_TYPE.GET_PROVIDER_STATE]: RATE_LIMIT_TYPES.BLOCKED,
@@ -53,6 +55,7 @@ const RATE_LIMIT_MAP = {
  * For events with user interaction (approve / reject | cancel) this map will
  * return an object with APPROVED, REJECTED, REQUESTED, and FAILED keys that map to the
  * appropriate event names.
+ * 用户交互事件（批准/拒绝|取消）的事件，这个映射将返回一个对象，该对象具有映射到适当事件名称的APPROVED、REJECTED、REQUESTED和FAILED键。
  */
 const EVENT_NAME_MAP = {
   [MESSAGE_TYPE.ETH_SIGN]: {
@@ -176,6 +179,7 @@ export default function createRPCMethodTrackingMiddleware({
       // provider method. For the events not special cased this is the only
       // event that will be fired and the event name will be
       // 'Provider Method Called'.
+      // 我们在dapp调用提供程序方法时立即跟踪初始“请求”事件。对于未特殊处理的事件，这是唯一将被触发的事件，事件名称将是'Provider Method Called'。
       const event = eventType
         ? eventType.REQUESTED
         : MetaMetricsEventName.ProviderMethodCalled;
@@ -185,6 +189,8 @@ export default function createRPCMethodTrackingMiddleware({
 
         // In personal messages the first param is data while in typed messages second param is data
         // if condition below is added to ensure that the right params are captured as data and address.
+        // 在个人消息中，第一个参数是数据，而在类型化消息中，第二个参数是数据
+        // 添加的条件是为了确保正确的参数被捕获为数据和地址。
         let data;
         let from;
         if (isValidAddress(req?.params?.[1])) {

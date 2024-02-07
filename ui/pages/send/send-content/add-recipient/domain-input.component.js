@@ -134,6 +134,7 @@ export default class DomainInput extends Component {
                 className="ens-input__wrapper__input"
                 type="text"
                 dir="auto"
+                // 输入公钥 (0x) 或 ENS 名称
                 placeholder={t('recipientAddressPlaceholder')}
                 onChange={this.onChange}
                 onPaste={this.onPaste}

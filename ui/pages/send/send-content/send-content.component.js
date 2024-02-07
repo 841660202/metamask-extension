@@ -73,15 +73,20 @@ export default class SendContent extends Component {
           {isEthGasPrice
             ? this.renderWarning(ETH_GAS_PRICE_FETCH_WARNING_KEY)
             : null}
+          <hr />
           {error ? this.renderError(error) : null}
           {warning ? this.renderWarning() : null}
           {showKnownRecipientWarning && !recipientWarningAcknowledged
             ? this.renderRecipientWarning()
             : null}
+          {/* 发送资产 */}
           <SendAssetRow />
+          {/* 发送数量 */}
           <SendAmountRow />
+          {/* 不支持1559的会有提示 */}
           {networkOrAccountNotSupports1559 ? <SendGasRow /> : null}
           {showHexData ? <SendHexDataRow /> : null}
+          {/* gas信息 */}
           {!isMultiLayerFeeNetwork && <GasDisplay gasError={gasError} />}
         </div>
       </PageContainerContent>

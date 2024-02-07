@@ -853,6 +853,7 @@ export default class Home extends PureComponent {
               }
             </div>
             <Box style={{ flexGrow: '1' }} paddingTop={tabPadding}>
+              {/* token, nft, activity */}
               <Tabs
                 t={this.context.t}
                 defaultActiveTabKey={defaultHomeActiveTabName}
@@ -958,6 +959,7 @@ export default class Home extends PureComponent {
                       onClick={this.onSupportLinkClick}
                       externalLink
                     >
+                      {/* MetaMask 支持 */}
                       {t('needHelpLinkText')}
                     </ButtonLink>
                     ///: END:ONLY_INCLUDE_IF

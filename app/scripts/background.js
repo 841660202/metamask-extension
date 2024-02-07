@@ -555,6 +555,7 @@ export function setupController(
   });
 
   // setup state persistence
+  // 设置状态持久性
   pump(
     storeAsStream(controller.store),
     debounce(1000),
@@ -923,6 +924,7 @@ export function setupController(
 
 /**
  * Opens the browser popup for user confirmation
+ * 打开浏览器弹出窗口以进行用户确认
  */
 async function triggerUi() {
   const tabs = await platform.getActiveTabs();
@@ -935,6 +937,7 @@ async function triggerUi() {
     tabs.length > 0 &&
     tabs[0].extData &&
     tabs[0].extData.indexOf('vivaldi_tab') > -1;
+  // 如果不是触发中，且是Vivaldi或者弹出窗口没有打开，且当前活动的MetaMask标签页不存在
   if (
     !uiIsTriggering &&
     (isVivaldi || !popupIsOpen) &&

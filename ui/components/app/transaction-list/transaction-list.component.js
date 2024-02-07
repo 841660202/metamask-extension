@@ -218,7 +218,9 @@ export default function TransactionList({
                   ) {
                     return (
                       <Fragment key={`${transactionGroup.nonce}:${index}`}>
+                        {/* 日期 */}
                         {renderDateStamp(index, dateGroup)}
+                        {/* 交易 */}
                         <SmartTransactionListItem
                           isEarliestNonce={index === 0}
                           smartTransaction={transactionGroup.initialTransaction}
@@ -260,6 +262,7 @@ export default function TransactionList({
                         }`}
                       >
                         {renderDateStamp(index, dateGroup)}
+                        {/* 完成啦 */}
                         {transactionGroup.initialTransaction
                           ?.transactionType === TransactionType.smart ? (
                           <SmartTransactionListItem
